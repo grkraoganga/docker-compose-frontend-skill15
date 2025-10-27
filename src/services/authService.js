@@ -1,7 +1,6 @@
 import axios from "axios";
 
-// Use environment variable set in Kubernetes or .env
-const API_URL = `${process.env.REACT_APP_BACKEND_URL}/auth`;
+const API_URL = "http://localhost:30083/back1/auth";
 
 export const login = async (username, password) => {
   const response = await axios.post(`${API_URL}/login`, { username, password });
